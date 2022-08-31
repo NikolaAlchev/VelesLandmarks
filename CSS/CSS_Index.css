@@ -1,0 +1,138 @@
+#Home{
+    background: url("../Images/veles5.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#Home img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    display: inline-block;
+    user-select: none;
+}
+#title{
+    color: white;
+    font-size: 5.5vw;
+    position: absolute;
+    top: 35vh;
+    z-index: 5;
+    text-shadow: 3px 3px 10px black;
+}
+#background2{
+    z-index:6;
+}
+#background1{
+    z-index: 7;
+}
+#word{
+    margin-left: 6vw;
+    margin-right: 3.5vw;
+    display: inline-block;
+}
+#word-1-mk{
+    margin-left: -6vw;
+    display: inline-block;
+}
+#word-2-mk{
+    margin-left: 6vw;
+    margin-right: 2vw;
+    display: inline-block;
+}
+@media (max-width: 1200px) {
+    #title{
+        font-size: 6vw;
+        top: 37vh;
+    }
+    #word{
+        margin-left: 8vw;
+        margin-right: 3vw;
+    }
+    #word-1-mk{
+        margin-left: -6vw;
+        display: inline-block;
+    }
+    #word-2-mk{
+        margin-left: 8vw;
+    }
+}
+@media (max-width: 1000px) {
+    #title{
+        font-size: 6.5vw;
+    }
+    #word{
+        margin-left: 10vw;
+        margin-right: 3vw;
+    }
+    #word-1-mk{
+        margin-left: -6vw;
+    }
+    #word-2-mk{
+        margin-left: 10vw;
+    }
+}
+@media (max-width: 700px) {
+    #title{
+        font-size: 8vw;
+        top: 39vh;
+    }
+    .title-mk{
+        font-size: 7vw !important;
+    }
+    #word{
+        margin-left: 13vw;
+        margin-right: 2.5vw;
+    }
+    #word-1-mk{
+        margin-left: -4vw;
+    }
+    #word-2-mk{
+        margin-left: 12vw;
+        margin-right: 3.5vw;
+    }
+}
+@media (max-width: 530px) {
+    #word{
+        margin-left: 16vw;
+        margin-right: 2.5vw;
+    }
+    #word-1-mk{
+        margin-left: -3vw;
+    }
+    #word-2-mk{
+        margin-left: 14vw;
+        margin-right: 3.5vw;
+    }
+}
+@media (max-width: 450px) {
+    #word{
+        margin-left: 18vw;
+        margin-right: 2.5vw;
+    }
+    #word-1-mk{
+        margin-left: -4vw;
+    }
+    #word-2-mk{
+        margin-left: 16vw;
+        margin-right: 3.5vw;
+    }
+
+}
+@media (max-width: 410px) {
+    #word{
+        margin-left: 17vw;
+        margin-right: 2.5vw;
+    }
+    #word-1-mk{
+        margin-left: -3vw;
+    }
+    #word-2-mk{
+        margin-left: 17vw;
+        margin-right: 3.5vw;
+    }
+}

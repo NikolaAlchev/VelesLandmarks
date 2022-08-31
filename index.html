@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Veles</title>
+    <link rel="stylesheet" href="CSS/CSS_Index.css">
+    <link rel="stylesheet" href="CSS/CSS_Header.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/CSS_Landmarks.css">
+    <link rel="stylesheet" href="CSS/CSS_Map.css">
+    <link rel="stylesheet" href="CSS/CSS_Weather.css">
+    <link rel="stylesheet" href="CSS/CSS_Hotel.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="JavaScript/JS_Veles.js" defer></script>
+    <script src="JavaScript/JS_en.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="body">
+<header id="navigation-bar">
+    <div class="left-section">
+        <a href="#Home">
+            <img id="seal" src="Images/veles_grb_white.png" alt="Veles Grb">
+            <p id="logo" >Veles</p>
+        </a>
+    </div>
+    <div class="right-section">
+        <ul id="navigation-list">
+            <li><a href="#Home" class="navigation-links">Home</a></li>
+            <li><a href="#Landmarks" class="navigation-links">Landmarks</a></li>
+            <li><a href="#Map" class="navigation-links">Map</a></li>
+            <li><a href="#Weather" class="navigation-links">Weather</a></li>
+            <li><a href="#Hotel" class="navigation-links">Hotels</a></li>
+        </ul>
+        <div id="buttons">
+            <button id="flag-button-1" onclick="flagAppear()">
+                <img src="Icons/gb.svg" alt="UK flag">
+            </button>
+            <button id="flag-button-2" onclick="flagDisappear()">
+                <img src="Icons/gb.svg" alt="UK flag">
+            </button>
+            <div id="between">
+                <div id="inner"></div>
+            </div>
+            <input type="search" id="search" placeholder="Search">
+            <button id="search-button-1" onclick="searchAppear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+            <button id="search-button-2" onclick="searchDisappear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+
+            <div id="menu-flags">
+                <div id="menu-flags-display">
+                    <ul>
+                        <li><a href="index_mk.html"><img src="Icons/mk.svg" alt="Macedonian flag"><p>Македонски</p></a></li>
+                        <li><a><img src="Icons/gb.svg" alt="UK flag"><p>English</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="hamburger-menu-container">
+            <button id="hamburger-button" onclick="hamburgerMenuAppear()" ><i class="fa-solid fa-bars fa-color fa-2xl" id="fa-color"></i></button>
+        </div>
+    </div>
+
+    <div id="hamburger-menu">
+        <ul>
+            <li onclick="location.href='#Home'; hamburgerMenuDisappear();"><i class="fa-solid fa-house fa-color"></i><p>Home</p></li>
+            <li onclick="location.href='#Landmarks'; hamburgerMenuDisappear();"><i class="fa-solid fa-flag fa-color"></i><p>Landmarks</p></li>
+            <li onclick="location.href='#Map'; hamburgerMenuDisappear();"><i class="fa-solid fa-map fa-color"></i><p>Map</p></li>
+            <li onclick="location.href='#Weather'; hamburgerMenuDisappear();"><i class="fa-solid fa-wind fa-color"></i><p>Weather</p></li>
+            <li onclick="location.href='#Hotel'; hamburgerMenuDisappear();"><i class="fa-solid fa-hotel fa-color"></i><p>Hotels</p></li>
+        </ul>
+        <div id="line"></div>
+        <div id="language">
+            <div id="language-text"><i class="fa-solid fa-globe fa-color"></i><p>Language</p></div>
+            <div id="language-flag"><a><img src="Icons/gb.svg" alt="UK flag"></a><a href="index_mk.html"><img src="Icons/mk.svg" alt="Macedonian flag"></a></div>
+        </div>
+    </div>
+    <div id="hamburger-menu-shadow" onclick="hamburgerMenuDisappear()"></div>
+
+</header>
+
+
+
+<section id="Home">
+    <img src="Images/veles4.png" alt="background" id="background4" draggable="false">
+    <img src="Images/veles3.png" alt="background" id="background3" draggable="false">
+    <img src="Images/veles2.png" alt="background" id="background2" draggable="false">
+    <img src="Images/veles1.png" alt="background" id="background1" draggable="false">
+    <h1 id="title">Welcome<div id="word">to</div>Veles</h1>
+</section>
+
+<section id="Landmarks">
+
+    <div id="text-container">
+        <div id="text-area">
+            <div class="text-element-opacity">
+                <div class="text-element" id="text1">
+                    <h1>Clock Tower</h1>
+                    <p>Built in the first half of the XVI century in the centre of the city, the Clock tower was used as a
+                        watch tower by the Ottoman authorities. By the end of XVII century, in the period of the
+                        reformation in Veles, the tower was transformed into a city clock. The bell of the tower
+                        could have been heard within a radius of 25km.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text2">
+                    <h1>Kocho Racin Memorial House</h1>
+                    <p>The house of one of the greatest Macedonian poets between the two World Wars, Kosta Solev Racin, was
+                        built on the left side of the Vardar River and represents a traditional Veles house,
+                        which today is considered the type of house with the most attractive architecture.
+                        The memorial house was completely reconstructed in 1962.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_2.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text3">
+                    <h1>Ossuary Monument</h1>
+                    <p>The Ossuary Monument in Veles was built to commemorate the Partisan soldiers who fought
+                        for the freedom of Veles and Macedonia during the National Liberation War from 1941 to 1945.
+                        In addition, this monument serves as a resting place for the remains of roughly one hundred
+                        fallen Partisan soldiers from the Veles area.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_3.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text4">
+                    <h1>Theater "Dzinot"</h1>
+                    <p>Founded in 1948, the National Institution Center of Culture "Jordan HK-Dzinot" is one of the oldest and
+                        leading theater institutions in North Macedonia. The theater is named after
+                        Jordan Hadzi Konstantinov - Dzinot - the first Macedonian playwright and founder of the Macedonian
+                        theater. The theater has a long and rich history of 70 years of production.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_4.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text5">
+                    <h1>Lake Mladost</h1>
+                    <p>Situated 8km north from the town Veles, in the surroundings
+                        of the Otovica village, the artificial lake Mladost represents one of the most visited destinations in the area. It is
+                        strongly recommended for transit travelers, as a place for a short brake.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_5.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text6">
+                    <h1>Church of St. Panteleimon</h1>
+                    <p>The Church of St. Panteleimon is considered to be one of the pearls of the sacral architecture
+                        in the Balkans. The church was built from 1840 to 1847 by the famous Macedonian church builder
+                        Andrej Damjanov together with his brothers. Since 2009, St. Panteleimon has been proclaimed a
+                        saint-protector of the city of Veles.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_6.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text7">
+                    <h1>Gemidzii Monument</h1>
+                    <p>The imposing Gemidzii monument represents an involution of 12 sun rays which symbolize
+                        the twelve members of the revolutionary group Gemidzii, who in the beginning of the Ilinden Uprising
+                        made famous attacks and bombings of Salonica, while trying to draw the attention of Europe to the
+                        Macedonian question.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_en_7.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="arrows">
+            <button onclick="rightScroll()" id="left-arrow"><i class="fa-solid fa-chevron-left fa-color"></i></button>
+            <button onclick="leftScroll()" id="right-arrow"><i class="fa-solid fa-chevron-right fa-color"></i></button>
+        </div>
+    </div>
+
+    <div class="scroll-container-1 scroll-container">
+        <div class="scroll-element scroll-element-1 img1" onclick="textAppear(0)"><div class="shade shade-1"><p class="text-shade">Clock Tower</p></div></div>
+        <div class="scroll-element scroll-element-1 img2" onclick="textAppear(1)"><div class="shade shade-1"><p class="text-shade">Kocho Racin Memorial House</p></div></div>
+        <div class="scroll-element scroll-element-1 img3" onclick="textAppear(2)"><div class="shade shade-1"><p class="text-shade">Ossuary Monument</p></div></div>
+        <div class="scroll-element scroll-element-1 img4" onclick="textAppear(3)"><div class="shade shade-1"><p class="text-shade">Theater "Dzinot"</p></div></div>
+        <div class="scroll-element scroll-element-1 img5" onclick="textAppear(4)"><div class="shade shade-1"><p class="text-shade">Lake Mladost</p></div></div>
+        <div class="scroll-element scroll-element-1 img6" onclick="textAppear(5)"><div class="shade shade-1"><p class="text-shade">Church of St. Panteleimon</p></div></div>
+        <div class="scroll-element scroll-element-1 img7" onclick="textAppear(6)"><div class="shade shade-1"><p class="text-shade">Gemidzii Monument</p></div></div>
+    </div>
+    <div class="scroll-container-2  scroll-container">
+        <div class="scroll-element scroll-element-2 img1" onclick="textAppear(0)"><div class="shade shade-2"><p class="text-shade">Clock Tower</p></div></div>
+        <div class="scroll-element scroll-element-2 img2" onclick="textAppear(1)"><div class="shade shade-2"><p class="text-shade">Kocho Racin Memorial House</p></div></div>
+        <div class="scroll-element scroll-element-2 img3" onclick="textAppear(2)"><div class="shade shade-2"><p class="text-shade">Ossuary Monument</p></div></div>
+        <div class="scroll-element scroll-element-2 img4" onclick="textAppear(3)"><div class="shade shade-2"><p class="text-shade">Theater "Dzinot"</p></div></div>
+        <div class="scroll-element scroll-element-2 img5" onclick="textAppear(4)"><div class="shade shade-2"><p class="text-shade">Lake Mladost</p></div></div>
+        <div class="scroll-element scroll-element-2 img6" onclick="textAppear(5)"><div class="shade shade-2"><p class="text-shade">Church of St. Panteleimon</p></div></div>
+        <div class="scroll-element scroll-element-2 img7" onclick="textAppear(6)"><div class="shade shade-2"><p class="text-shade">Gemidzii Monument</p></div></div>
+    </div>
+
+</section>
+
+<section id="Map">
+    <iframe id="map-iframe" src="https://my.atlistmaps.com/map/f2c241f6-70ba-43c9-a088-01ccee82427c?share=true" allow="geolocation" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <div id="route-container">
+        <div id="route-text">
+            <p>Organize your day and visit all the landmarks of Veles</p>
+        </div>
+        <a href="https://www.google.com/maps/@41.7378454,21.7532699,13z/data=!3m1!4b1!4m2!6m1!1s1SiBqB9_Swc3BPA9N8RyUMAVWiO3xeEk" target="_blank"><div id="route-button">Route</div></a>
+    </div>
+</section>
+
+
+<section id="Weather">
+    <div id="weather-container">
+        <div id="weather-left">
+            <div id="clock">0:00</div>
+            <div class="tomorrow" data-location-id="067551" data-language="EN" data-unit-system="METRIC" data-skin="dark" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+                <a href="https://www.tomorrow.io/weather/" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                    <img alt="Powered by Tomorrow.io" src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg" width="140" height="15"/>
+                </a>
+            </div>
+        </div>
+        <div id="weather-right">
+            <div id="weather-right-top"></div>
+
+            <div id="weather-right-bottom">
+                <p>Average Monthly Temperature</p>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="Hotel">
+    <div id="top-section">
+        <div id="hotel-container-out">
+            <div id="hotel-container-in">
+                <div id="hotel-grid">
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-1" onclick="hotelTextAppear(0)">
+                            <div class="hotel-image">
+                                <p>Gardenia Hotel & Spa</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>75 Akademik Penco Davcev Str., 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-2" onclick="hotelTextAppear(1)">
+                            <div class="hotel-image">
+                                <p>International Palace</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>8 September 40, 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-3" onclick="hotelTextAppear(2)">
+                            <div class="hotel-image">
+                                <p>Hotel Romantique</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>Lake of Veles, 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="hotel-shape"></div>
+        </div>
+    </div>
+    <div id="go-to"></div>
+    <div id="bottom-section">
+        <div class="hotel-preview-opacity" id="hotel-preview-1">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">Gardenia Hotel & Spa</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">Surrounded by gardens, this contemporary hotel is 4km from the
+                                historic Clock Tower and 3km from the World War II memorial, Kosturnica Veles. The rooms
+                                feature TVs, minibar, and tea and coffee makers. The hotel has a restaurant, a stylish
+                                lounge, an outdoor swimming pool and a ballroom. A fully renovated spa and wellness center
+                                with sauna and indoor heated pool is available to guests free of charge. For all interested
+                                guests, the hotel also offers bicycle rental.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">2 swimming pools</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-mug-hot fa-color"></i></div><p class="facilities-text">Tea/coffee maker in all rooms</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">2 swimming pools</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-mug-hot fa-color"></i></div><p class="facilities-text">Tea/coffee maker in all rooms</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        <div class="slider" id="slider-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-preview-opacity" id="hotel-preview-2">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">International Palace</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">International Palace is a 4-star luxury hotel, situated close to
+                                Theater "Dzhinot". It contains 48 soundproof rooms that strike a perfect balance between
+                                comfort and style. The hotel has a bar, a casino and a terrace. Among the facilities of
+                                this property are a restaurant, a 24-hour front desk and room service, along with free
+                                Wi-Fi throughout the property. Free private parking is available and the hotel also features
+                                car hire for guests who want to explore the surrounding area. Rooms are fitted with air
+                                conditioning, a safe deposit box and a flat-screen TV, and some rooms at the hotel have
+                                a balcony. A continental breakfast is available every morning.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-utensils"></i></div><p class="facilities-text">Restaurant</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-utensils"></i></div><p class="facilities-text">Restaurant</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        <div class="slider" id="slider-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-preview-opacity" id="hotel-preview-3">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">Hotel Romantique</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">With modern design and elegant style, Hotel Romantique Veles is
+                                one of the most popular hotels in Macedonia when it comes to comfortable accommodation
+                                and premium service. The hotel offers single rooms, double rooms and deluxe studios, all
+                                well-equipped. The hotel also features elegantly decorated restaurants which serves
+                                delicious traditional and international dishes with a wide range of beverages. The guests
+                                can also enjoy the refreshing swimming pool in the summer heat.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">1 swimming pool</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-umbrella-beach"></i></div><p class="facilities-text">Private beach area</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">1 swimming pool</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-umbrella-beach"></i></div><p class="facilities-text">Private beach area</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Bar</p></div></div>
+                        <div class="slider" id="slider-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <div id="footer-container">
+        <div id="logo-container">
+            <img src="Images/veles_grb_white.png" alt="Veles Grb">
+            <p id="footer-logo">Veles</p>
+        </div>
+        <div id="copyright-container">
+            <p id="copyright-text">Copyright © 2022</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+
+</html>

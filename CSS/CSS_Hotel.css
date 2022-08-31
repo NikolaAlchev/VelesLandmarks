@@ -1,0 +1,613 @@
+#Hotel{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#top-section{
+    position: absolute;
+    top: 110px;
+    width: 100%;
+    height: 300px;
+}
+#hotel-container-out{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#hotel-container-in{
+    position: absolute;
+    bottom: 50px;
+}
+#hotel-shape{
+    position: absolute;
+    bottom: 0;
+    height: 180px;
+    width: 90%;
+    background-color: rgb(20,20,30);
+    border-radius: 20px;
+    z-index: -1;
+}
+#hotel-grid{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-gap: 50px;
+    height: 270px;
+}
+.hotel-container{
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    margin-top: 20px;
+    transition: 0.5s;
+    border-radius: 20px;
+}
+.go-to-link:hover .hotel-container{
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+.hotel-image{
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+#hotel-1 .hotel-image{
+    background: url("../Images/gardenia.jpg") no-repeat;
+    background-size: cover;
+}
+#hotel-2 .hotel-image{
+    background: url("../Images/international_palace.jpg") no-repeat;
+    background-size: cover;
+}
+#hotel-3 .hotel-image{
+    background: url("../Images/romantique.jpg") no-repeat;
+    background-size: cover;
+}
+.hotel-image p{
+    color: white;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-left: 20px;
+    text-shadow: 0 0 10px black;
+}
+#hotel-grid a{
+    text-decoration: none;
+}
+.hotel-text{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 10px;
+    padding-top: 15px;
+}
+.hotel-star{
+    margin-bottom: 10px;
+}
+.hotel-star .fa-color{
+    color: #FFD700;
+}
+.hotel-address{
+    color: grey;
+    font-size: 12px;
+}
+.hotel-address .fa-color{
+    color:rgb(20,20,30);
+}
+.hotel-address i{
+    margin-right: 5px;
+}
+#bottom-section{
+    position: absolute;
+    top: 490px;
+    width: 90%;
+}
+.hotel-preview{
+    display: none;
+    width: 100%;
+}
+.hotel-preview-opacity{
+    opacity: 0;
+    transition: 1s;
+    width: 100%;
+}
+#hotel-preview-1{
+    opacity: 1;
+}
+#hotel-preview-1 .hotel-preview{
+    display: inline-block;
+}
+.hotel-preview-flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.hotel-left{
+    font-size: 22px;
+    width: 700px;
+}
+.hotel-about{
+    margin-top: 30px;
+}
+.hotel-name{
+    font-size: 46px;
+}
+.hotel-about-text{
+    font-size: 16px;
+}
+.facilities-shape{
+    width: 50px;
+    height: 50px;
+    background-color: #d9e9fe;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 20px;
+}
+.facilities-text{
+    font-size: 16px;
+    margin-left: 10px;
+}
+.hotel-facilities{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 30px;
+}
+.hotel-facilities .fa-color{
+    color: rgb(20,20,30);
+}
+.hotel-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#slider-1{
+    background-image: url("../Images/gardenia-1.jpg"),url("../Images/gardenia-2.jpg"),url("../Images/gardenia-3.jpg"),url("../Images/gardenia-4.jpg"),url("../Images/gardenia-5.jpg");
+    animation:slider1 20s infinite linear;
+    background-size: 100% auto;
+    -webkit-background-size: 100%;
+}
+#slider-2{
+    background-image: url("../Images/int_palace-1.jpg"),url("../Images/int_palace-2.jpg"),url("../Images/int_palace-3.jpg"),url("../Images/int_palace-4.jpg"),url("../Images/int_palace-5.jpg");
+    animation:slider2 20s infinite linear;
+    background-size: 100% auto;
+    -webkit-background-size: 100%;
+}
+#slider-3{
+    background-image: url("../Images/romantique-1.jpg"),url("../Images/romantique-2.jpg"),url("../Images/romantique-3.jpg"),url("../Images/romantique-4.jpg"),url("../Images/romantique-5.jpg");
+    animation:slider3 20s infinite linear;
+    background-size: 100% auto;
+    -webkit-background-size: 100%;
+}
+.slider{
+    height: 300px;
+    width: 550px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px black;
+    border: 4px solid white;
+}
+#go-to{
+    width: 1px;
+    height: 1px;
+    background: transparent;
+    position: absolute;
+    display: none;
+}
+@keyframes slider1 {
+    0%{
+        background: url("../Images/gardenia-1.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    20%{
+        background: url("../Images/gardenia-2.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    40%{
+        background: url("../Images/gardenia-3.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    60%{
+        background: url("../Images/gardenia-4.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    80%{
+        background: url("../Images/gardenia-5.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+}
+
+@keyframes slider2 {
+    0%{
+        background: url("../Images/int_palace-1.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    20%{
+        background: url("../Images/int_palace-2.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    40%{
+        background: url("../Images/int_palace-3.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    60%{
+        background: url("../Images/int_palace-4.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    80%{
+        background: url("../Images/int_palace-5.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+}
+
+@keyframes slider3 {
+    0%{
+        background: url("../Images/romantique-1.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    20%{
+        background: url("../Images/romantique-2.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    40%{
+        background: url("../Images/romantique-3.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    60%{
+        background: url("../Images/romantique-4.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+    80%{
+        background: url("../Images/romantique-5.jpg");
+        background-size: 100% auto;
+        -webkit-background-size: 100%;
+    }
+}
+.hotel-facilities-vertical{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.hotel-display-vertical{
+    display: none;
+}
+.hotel-facilities-vertical .fa-color{
+    color: rgb(20,20,30);
+}
+.facilities-element{
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+
+}
+@media (max-width: 1450px) {
+    .hotel-left{
+        font-size: 22px;
+        width: 600px;
+    }
+}
+@media (max-width: 1400px) {
+    .slider{
+        height:250px;
+        width: 450px;
+    }
+}
+@media (max-width: 1250px) {
+    .slider{
+        height:225px;
+        width: 400px;
+    }
+    .hotel-name{
+        font-size: 36px;
+    }
+    .hotel-about-text{
+        font-size: 12px;
+    }
+    .hotel-left{
+        font-size: 16px;
+        width: 500px;
+    }
+    .facilities-shape{
+        width: 35px;
+        height: 35px;
+    }
+    .facilities-text{
+        font-size: 13px;
+        margin-left: 10px;
+    }
+    #hotel-grid{
+        grid-template-columns: 250px 250px 250px;
+    }
+    .hotel-container{
+        width: 250px;
+        height: 210px;
+    }
+    .go-to-link{
+        width: 250px;
+        height: 230px;
+    }
+    .hotel-image{
+        height: 120px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    #hotel-container-in{
+        bottom: 25px;
+    }
+    .hotel-facilities{
+        margin-top: 10px;
+    }
+}
+@media (max-width: 1080px) {
+    #Hotel{
+        height: 900px !important;
+    }
+    #bottom-section{
+        top: 440px !important;
+    }
+    .hotel-preview-flex{
+        display: flex;
+        flex-direction: column;
+    }
+    .hotel-left{
+        font-size: 22px;
+        width: 90%;
+    }
+    .hotel-name{
+        text-align: center;
+    }
+    .hotel-display-vertical{
+        display: inline-block;
+    }
+    .hotel-display{
+        display: none;
+    }
+    .hotel-right{
+        width: 80%;
+        margin-top: 30px;
+    }
+    .facilities-shape{
+       margin-left: 0;
+    }
+    #hotel-grid{
+        grid-template-columns: 210px 210px 210px;
+        grid-gap: 20px;
+
+    }
+    .hotel-container{
+        width: 200px;
+        height: 210px;
+    }
+    .go-to-link{
+        width: 200px;
+        height: 230px;
+    }
+    .hotel-image{
+        height: 120px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    #hotel-container-in{
+        bottom: 25px;
+    }
+    .hotel-image p{
+        padding-top: 15px;
+        padding-left: 15px;
+        font-size: 13px;
+    }
+    .hotel-address{
+        font-size: 11px;
+    }
+}
+@media (max-width: 940px) {
+    .slider{
+        height:200px;
+        width: 350px;
+        border-radius: 20px;
+    }
+    .facilities-text{
+        font-size: 11px;
+    }
+    .hotel-facilities-vertical{
+        margin-right: 15px;
+    }
+
+}
+@media (max-width: 800px) {
+    #Hotel{
+        height: 1500px !important;
+        position: relative;
+    }
+    #top-section{
+        position: absolute;
+        top: 120px;
+        width: 100%;
+        height: 850px;
+    }
+    #hotel-container-out{
+        height: 850px;
+    }
+    #hotel-container-in{
+        position: absolute;
+        top: 0;
+        height: 850px;
+    }
+    #hotel-shape{
+        display: none;
+    }
+    #hotel-grid{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-gap: 40px;
+        height: 270px;
+    }
+    .hotel-container{
+        width: 300px;
+        height: 250px;
+        background-color: white;
+        margin-top: 0;
+        transition: 0.5s;
+        border-radius: 20px;
+        box-shadow: 0 0 15px black;
+    }
+    .go-to-link{
+        width: 300px;
+        height: 250px;
+    }
+    .go-to-link:hover .hotel-container{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .hotel-image{
+        height: 150px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    #bottom-section{
+        top:970px !important;
+        margin-bottom: 20px;
+    }
+    #go-to{
+        top: 890px !important;
+        display: inline-block;
+    }
+    .hotel-image p{
+        font-size: 15px;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+}
+@media (max-width: 700px) {
+    .facilities-text{
+        width: 70px;
+    }
+    #top-section{
+        top: 100px;
+    }
+    
+}
+@media (max-width: 620px) {
+    .hotel-name{
+        font-size: 30px !important;
+    }
+}
+@media (max-width: 550px) {
+    #Hotel{
+        height: 1550px !important;
+    }
+    .hotel-display{
+        display: flex;
+        margin-top: 10px;
+    }
+    .hotel-display-vertical{
+        display: none;
+    }
+    .facilities-text{
+        width: 80px;
+    }
+    .facilities-shape{
+        width: 40px;
+        height: 40px;
+    }
+    .hotel-about-text{
+        text-align: justify !important;
+    }
+    .hotel-right{
+        width: 100%;
+    }
+    .slider{
+        width: 90%;
+    }
+}
+@media (max-width: 500px) {
+
+    .hotel-name{
+        font-size: 30px;
+    }
+    .hotel-about-text{
+        margin-top: -10px;
+    }
+    #Hotel{
+        height: 1550px !important;
+    }
+}
+@media (max-width: 450px) {
+    .hotel-facilities{
+        font-size: 15px;
+        overflow-x: hidden;
+    }
+    .facilities-shape{
+        width: 30px;
+        height: 30px;
+    }
+    .facilities-text{
+        width: 70px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    .hotel-name{
+        font-size: 26px !important;
+    }
+}
+@media (max-width: 370px) {
+    #Hotel{
+        height: 1560px !important;
+    }
+}
+@media (max-width: 360px) {
+    .facilities-text{
+        display: none;
+    }
+    .facilities-shape{
+        margin-right: 15px;
+    }
+}
+@media (max-width: 340px) {
+    .hotel-about-text{
+        width: 260px;
+    }
+    .hotel-name{
+        width: 260px;
+    }
+}
+@media (max-height: 850px){
+    .hotel-about{
+        margin-top: 20px;
+    }
+    .hotel-name{
+        font-size: 42px;
+    }
+    .hotel-about-text{
+        font-size: 14px;
+    }
+    #bottom-section{
+        top:430px;
+    }
+    #go-to{
+        top: 350px;
+    }
+}
+@media (max-height: 760px) {
+    #Hotel{
+        height: 760px;
+    }
+
+}

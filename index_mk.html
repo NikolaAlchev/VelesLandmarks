@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Велес</title>
+    <link rel="stylesheet" href="CSS/CSS_Index.css">
+    <link rel="stylesheet" href="CSS/CSS_Header.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
+    <link rel="stylesheet" href="CSS/CSS_Landmarks.css">
+    <link rel="stylesheet" href="CSS/CSS_Map.css">
+    <link rel="stylesheet" href="CSS/CSS_Weather.css">
+    <link rel="stylesheet" href="CSS/CSS_Hotel.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="JavaScript/JS_Veles.js" defer></script>
+    <script src="JavaScript/JS_mk.js" defer></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body id="body">
+<header id="navigation-bar">
+    <div class="left-section">
+        <a href="#Home">
+            <img id="seal" src="Images/veles_grb_white.png" alt="Veles Grb">
+            <p id="logo">Велес</p>
+        </a>
+    </div>
+    <div class="right-section">
+        <ul id="navigation-list">
+            <li><a href="#Home" class="navigation-links">Дома</a></li>
+            <li><a href="#Landmarks" class="navigation-links">Знаменитости</a></li>
+            <li><a href="#Map" class="navigation-links">Мапа</a></li>
+            <li><a href="#Weather" class="navigation-links">Време</a></li>
+            <li><a href="#Hotel" class="navigation-links">Хотели</a></li>
+        </ul>
+        <div id="buttons">
+            <button id="flag-button-1" onclick="flagAppear()">
+                <img src="Icons/mk.svg" alt="Macedonian flag">
+            </button>
+            <button id="flag-button-2" onclick="flagDisappear()">
+                <img src="Icons/mk.svg" alt="Macedonian flag">
+            </button>
+            <div id="between">
+                <div id="inner"></div>
+            </div>
+            <input type="search" id="search" placeholder="Пребарувај">
+            <button id="search-button-1" onclick="searchAppear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+            <button id="search-button-2" onclick="searchDisappear()">
+                <i class="fa-solid fa-magnifying-glass fa-color"></i>
+            </button>
+
+            <div id="menu-flags">
+                <div id="menu-flags-display">
+                    <ul>
+                        <li><a><img src="Icons/mk.svg" alt="Macedonian flag"><p>Македонски</p></a></li>
+                        <li><a href="index.html"><img src="Icons/gb.svg" alt="UK flag"><p>English</p></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="hamburger-menu-container">
+            <button id="hamburger-button" onclick="hamburgerMenuAppear()" ><i class="fa-solid fa-bars fa-color fa-2xl" id="fa-color"></i></button>
+        </div>
+    </div>
+
+    <div id="hamburger-menu">
+        <ul>
+            <li onclick="location.href='#Home'; hamburgerMenuDisappear();"><i class="fa-solid fa-house fa-color"></i><p>Дома</p></li>
+            <li onclick="location.href='#Landmarks'; hamburgerMenuDisappear();"><i class="fa-solid fa-flag fa-color"></i><p>Знаменитости</p></li>
+            <li onclick="location.href='#Map'; hamburgerMenuDisappear();"><i class="fa-solid fa-map fa-color"></i><p>Мапа</p></li>
+            <li onclick="location.href='#Weather'; hamburgerMenuDisappear();"><i class="fa-solid fa-wind fa-color"></i><p>Време</p></li>
+            <li onclick="location.href='#Hotel'; hamburgerMenuDisappear();"><i class="fa-solid fa-hotel fa-color"></i><p>Хотели</p></li>
+        </ul>
+        <div id="line"></div>
+        <div id="language">
+            <div id="language-text"><i class="fa-solid fa-globe fa-color"></i><p>Јазик</p></div>
+            <div id="language-flag"><a href="index.html"><img src="Icons/gb.svg" alt="UK flag"></a><a><img src="Icons/mk.svg" alt="Macedonian flag"></a></div>
+        </div>
+    </div>
+    <div id="hamburger-menu-shadow" onclick="hamburgerMenuDisappear()"></div>
+
+</header>
+
+
+
+<section id="Home">
+    <img src="Images/veles4.png" alt="background" id="background4" draggable="false">
+    <img src="Images/veles3.png" alt="background" id="background3" draggable="false">
+    <img src="Images/veles2.png" alt="background" id="background2" draggable="false">
+    <img src="Images/veles1.png" alt="background" id="background1" draggable="false">
+    <h1 id="title" class="title-mk"><div id="word-1-mk">Добредојде</div><div id="word-2-mk">во</div>Велес</h1>
+</section>
+
+<section id="Landmarks">
+
+    <div id="text-container">
+        <div id="text-area">
+            <div class="text-element-opacity">
+                <div class="text-element" id="text1">
+                    <h1>Саат Кула</h1>
+                    <p>Изградена во првата половина на XVI век во центарот на градот, Саат кулата била користена како
+                        стражарска кула од страна на османлиските власти. Кон крајот на XVII век, во периодот на
+                        реформацијата во Велес, кулата била претворена во градски часовник. Ѕвоното на кулата можело да
+                        се слушне во радиус од 25 километри.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_1.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text2">
+                    <h1>Спомен-куќа на Кочо Рацин</h1>
+                    <p>Куќата на еден од најголемите македонски поети меѓу двете светски војни, Коста Солев Рацин, е
+                        изградена на левата страна од реката Вардар и претставува традиционална велешка куќа, која
+                        денес се смета за тип на куќа со најатрактивна архитектура. Спомен куќата е целосно реконструирана
+                        во 1962 година.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_2.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text3">
+                    <h1>Спомен-костурница</h1>
+                    <p>Спомен-костурницата во Велес е изградена во спомен на партизанските војници кои се бореле за слободата на
+                        Велес и Македонија за време на НОБ од 1941 до 1945 година. Покрај тоа, овој споменик служи како
+                        почивалиште за посмртните останки на околу сто паднати партизански војници од Велешко.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_3.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text4">
+                    <h1>Театар „Џинот“</h1>
+                    <p>Основан во 1948 година, Националниот Културен Центар „Јордан Х.К.-Џинот“ е еден од
+                        најстарите и водечки театарски институции во Македонија. Театарот го носи името на неговиот
+                        патрон Јордан Хаџи Константинов Џинот – првиот македонски драмски писател и основач на
+                        македонскиот театар.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_4.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text5">
+                    <h1>Езеро Младост</h1>
+                    <p>Вештачкото езеро Младост, кое се наоѓа на 8км северно од градот Велес, во околината на селото
+                        Отовица,  претставува една од најпосетуваните дестинации во областа. Особено се препорачува за
+                        транзитни патници, како место за краток одмор.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_5.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text6">
+                    <h1>Свети Пантелејмон</h1>
+                    <p>Црквата Свети Пантелејмон се смета за еден од бисерите на сакралната архитектура на Балканот.
+                        Црквата била изградена од 1840 до 1847 година од познатиот македонски црковен градител Андреј
+                        Дамјанов заедно со неговите браќа. Од 2009 година Свети Пантелејмон е прогласен за светец-
+                        заштитник на градот Велес.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_6.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+            <div class="text-element-opacity">
+                <div class="text-element" id="text7">
+                    <h1>Споменик на Гемиџиите</h1>
+                    <p>Импозантниот споменик на Гемиџиите претставува заплет од 12 сончеви зраци кои ги
+                        симболизираат дванаесетте членови на револуционерната група Гемиџии, кои во почетокот на
+                        Илинденското востание извршиле познати напади во Солун, обидувајќи се да го
+                        свртат вниманието на Европа кон македонското прашање.</p>
+                    <audio controls class="source">
+                        <source src="Audio/audio_mk_7.mp3" type="audio/mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+
+        <div id="arrows">
+            <button onclick="rightScroll()" id="left-arrow"><i class="fa-solid fa-chevron-left fa-color"></i></button>
+            <button onclick="leftScroll()" id="right-arrow"><i class="fa-solid fa-chevron-right fa-color"></i></button>
+        </div>
+    </div>
+    <div class="scroll-container-1 scroll-container">
+        <div class="scroll-element scroll-element-1 img1" onclick="textAppear(0)"><div class="shade shade-1"><p class="text-shade">Саат Кула</p></div></div>
+        <div class="scroll-element scroll-element-1 img2" onclick="textAppear(1)"><div class="shade shade-1"><p class="text-shade">Спомен-куќа на Кочо Рацин</p></div></div>
+        <div class="scroll-element scroll-element-1 img3" onclick="textAppear(2)"><div class="shade shade-1"><p class="text-shade">Спомен костурница</p></div></div>
+        <div class="scroll-element scroll-element-1 img4" onclick="textAppear(3)"><div class="shade shade-1"><p class="text-shade">Театар „Џинот“</p></div></div>
+        <div class="scroll-element scroll-element-1 img5" onclick="textAppear(4)"><div class="shade shade-1"><p class="text-shade">Езеро Младост</p></div></div>
+        <div class="scroll-element scroll-element-1 img6" onclick="textAppear(5)"><div class="shade shade-1"><p class="text-shade">Свети Пантелејмон</p></div></div>
+        <div class="scroll-element scroll-element-1 img7" onclick="textAppear(6)"><div class="shade shade-1"><p class="text-shade">Споменик на Гемиџиите</p></div></div>
+    </div>
+    <div class="scroll-container-2  scroll-container">
+        <div class="scroll-element scroll-element-2 img1" onclick="textAppear(0)"><div class="shade shade-2"><p class="text-shade">Саат Кула</p></div></div>
+        <div class="scroll-element scroll-element-2 img2" onclick="textAppear(1)"><div class="shade shade-2"><p class="text-shade">Спомен-куќа на Кочо Рацин</p></div></div>
+        <div class="scroll-element scroll-element-2 img3" onclick="textAppear(2)"><div class="shade shade-2"><p class="text-shade">Спомен костурница</p></div></div>
+        <div class="scroll-element scroll-element-2 img4" onclick="textAppear(3)"><div class="shade shade-2"><p class="text-shade">Театар „Џинот“</p></div></div>
+        <div class="scroll-element scroll-element-2 img5" onclick="textAppear(4)"><div class="shade shade-2"><p class="text-shade">Езеро Младост</p></div></div>
+        <div class="scroll-element scroll-element-2 img6" onclick="textAppear(5)"><div class="shade shade-2"><p class="text-shade">Свети Пантелејмон</p></div></div>
+        <div class="scroll-element scroll-element-2 img7" onclick="textAppear(6)"><div class="shade shade-2"><p class="text-shade">Споменик на Гемиџиите</p></div></div>
+    </div>
+
+</section>
+
+<section id="Map">
+    <iframe id="map-iframe" src="https://my.atlistmaps.com/map/340dc8d1-d9ff-4415-8c39-941eb753c2bc?share=true" allow="geolocation" frameborder="0" scrolling="no" allowfullscreen></iframe>
+    <div id="route-container">
+        <div id="route-text">
+            <p>Организирајте го денот и посетете ги сите знаменитости на Велес</p>
+        </div>
+        <a href="https://www.google.com/maps/@41.7380516,21.7533443,13z/data=!3m1!4b1!4m2!6m1!1s1tn03-u5AuSuFkjAbA3g1WyiQnezoB8o" target="_blank"><div id="route-button">Рута</div></a>
+    </div>
+</section>
+
+<section id="Weather">
+    <div id="weather-container">
+        <div id="weather-left">
+            <div id="clock">0:00</div>
+            <div class="tomorrow" data-location-id="067551" data-language="EN" data-unit-system="METRIC" data-skin="dark" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
+                <a href="https://www.tomorrow.io/weather/" rel="nofollow noopener noreferrer" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
+                    <img alt="Powered by Tomorrow.io" src="https://weather-website-client.tomorrow.io/img/powered-by-tomorrow.svg" width="140" height="15"/>
+                </a>
+            </div>
+        </div>
+        <div id="weather-right">
+            <div id="weather-right-top"></div>
+
+            <div id="weather-right-bottom">
+                <p>Просечна месечна температура</p>
+                <div class="chart-container">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section id="Hotel">
+    <div id="top-section">
+        <div id="hotel-container-out">
+            <div id="hotel-container-in">
+                <div id="hotel-grid">
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-1" onclick="hotelTextAppear(0)">
+                            <div class="hotel-image">
+                                <p>Гардениа хотел & спа</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>75 Akademik Penco Davcev Str., 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-2" onclick="hotelTextAppear(1)">
+                            <div class="hotel-image">
+                                <p>Хотел Интернационал</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>8 September 40, 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a class="go-to-link" href="#go-to">
+                        <div class="hotel-container" id="hotel-3" onclick="hotelTextAppear(2)">
+                            <div class="hotel-image">
+                                <p>Хотел Романтик</p>
+                            </div>
+                            <div class="hotel-text">
+                                <div class="hotel-star"><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-solid fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i><i class="fa-regular fa-star fa-color"></i></div>
+                                <div class="hotel-address"><i class="fa-solid fa-location-dot fa-color"></i>Lake of Veles, 1400 Veles, North Macedonia</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div id="hotel-shape"></div>
+        </div>
+    </div>
+    <div id="go-to"></div>
+    <div id="bottom-section">
+        <div class="hotel-preview-opacity" id="hotel-preview-1">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">Гардениа хотел & спа</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">Опкружен со градини, овој современ хотел е на 4км од историската
+                                Саат кула, односно 3км од споменикот од Втората Светска Војна, Костурница Велес. Собите
+                                располагаат со телевизор, мини бар и апарат за чај и кафе. Во склоп на хотелот има
+                                ресторан, стилски салон, отворен базен, конференциска сала и сала за танц. На гостите
+                                им е на располагање бесплатно целосно реновиран спа и велнес центар со сауна и
+                                внатрешен загреан базен. За сите заинтересирани гости, хотелот нуди и наем на велосипеди.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">2 базени</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-mug-hot fa-color"></i></div><p class="facilities-text">Машина за чај/кафе во сите соби</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">2 базени</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-mug-hot fa-color"></i></div><p class="facilities-text">Машина за чај/кафе во сите соби</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        <div class="slider" id="slider-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-preview-opacity" id="hotel-preview-2">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">Хотел Интернационал</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">Хотел Интернационал е луксузен хотел со 4 ѕвезди, сместен во
+                                непосредна близина на Театарот „Џинот“. Содржи 48 звучно изолирани соби кои прават
+                                совршен баланс помеѓу удобноста и стилот. Хотелот располага со бар, казино, тераса и
+                                ресторан. Собите се опремени со клима уред, сеф и телевизор, а некои соби во хотелот
+                                имаат балкон. Бесплатен приватен паркинг е достапен, а исто така, хотелот овозможува
+                                изнајмување на автомобили за оние гости кои сакаат да ја истражат околината.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-utensils"></i></div><p class="facilities-text">Ресторан</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-utensils"></i></div><p class="facilities-text">Ресторан</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        <div class="slider" id="slider-2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hotel-preview-opacity" id="hotel-preview-3">
+            <div class="hotel-preview">
+                <div class="hotel-preview-flex">
+                    <div class="hotel-left">
+                        <h1 class="hotel-name">Хотел Романтик</h1>
+                        <div class="hotel-about">
+                            <p class="hotel-about-text">Со модерен дизајн и елегантен стил, Хотел Романтик Велес е еден
+                                од најпопуларните хотели во Македонија кога станува збор за удобно сместување и премиум
+                                услуга. Хотелот нуди еднокреветни, двокреветни соби и луксузни студија, сите добро
+                                опремени. Хотелот има и елегантно декорирани ресторани кои служат вкусни традиционални
+                                и интернационални јадења со голем избор на пијалоци. Гостите можат да уживаат и во
+                                освежителниот базен во летните горештини.</p>
+                            <div class="hotel-facilities hotel-display"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">1 базен</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-umbrella-beach"></i></div><p class="facilities-text">Приватна плажа</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        </div>
+                    </div>
+                    <div class="hotel-right">
+                        <div class="hotel-facilities-vertical hotel-display-vertical"><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-person-swimming fa-color"></i></div><p class="facilities-text">1 базен</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-umbrella-beach"></i></div><p class="facilities-text">Приватна плажа</p></div><div class="facilities-element"><div class="facilities-shape"><i class="fa-solid fa-martini-glass fa-color"></i></div><p class="facilities-text">Бар</p></div></div>
+                        <div class="slider" id="slider-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<footer>
+    <div id="footer-container">
+        <div id="logo-container">
+            <img src="Images/veles_grb_white.png" alt="Veles Grb">
+            <p id="footer-logo">Велес</p>
+        </div>
+        <div id="copyright-container">
+            <p id="copyright-text">Copyright © 2022</p>
+        </div>
+
+    </div>
+</footer>
+</body>
+</html>
